@@ -10,10 +10,11 @@ langchain-community
 langchain-groq
 langchain-astradb
 sentence-transformers
-transformers[torch]==4.40.0
-torch==2.5.1+cpu
-torchaudio==2.5.1+cpu
-torchvision==0.18.1+cpu
+transformers[torch]
+torch
+torchaudio
+torchvision
 aiofiles
 
 --extra-index-url https://download.pytorch.org/whl/cpu
+
