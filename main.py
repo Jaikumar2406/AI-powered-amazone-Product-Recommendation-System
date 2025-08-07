@@ -18,8 +18,10 @@ from langchain_core.prompts import ChatPromptTemplate
 app = FastAPI()
 load_dotenv()
 
-class InputText(BaseModel):
-    input: str
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+templates = Jinja2Templates(directory="templates")
+
 
 class UserInput(BaseModel):
     input: str

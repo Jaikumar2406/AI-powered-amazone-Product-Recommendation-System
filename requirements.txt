@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+python-dotenv
+pydantic
+jinja2
+pandas
+langchain
+langchain-core
+langchain-community
+langchain-groq
+langchain-astradb
+sentence-transformers
+transformers
+torch
+aiofiles

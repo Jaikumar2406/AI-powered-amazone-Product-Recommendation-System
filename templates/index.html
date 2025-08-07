@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ai - powered product recommendation</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>AI Powered Product Recommendation</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#content" class="nav-link">Chat</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to AI - powered product recommendation</h1>
+                <p class="hero-description">
+                    Discover the best Amazon products with AI-powered recommendations.
+Just tell us what you’re looking for — we’ll handle the rest.
+                </p>
+                </div>
+                <a href="#content" class="cta-button">Start Chatting</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content/Chat Section -->
+    <section id="content" class="chat-section">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>Chat with AI Assistant</h2>
+                <p>Ask me anything and I'll help you find the answers!</p>
+            </div>
+            
+            <div class="chat-box" id="chatBox">
+                <div class="welcome-message">
+                    <div class="message bot-message">
+                        <div class="message-avatar bot-avatar">🤖</div>
+                        <div class="message-content">
+                            <p>Hello! I'm your AI assistant. How can I recommend you today?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="questionInput" 
+                        placeholder="Enter your question here..." 
+                        class="chat-input"
+                        maxlength="500"
+                    >
+                    <button id="generateBtn" class="generate-btn">
+                        <span class="btn-text">Generate</span>
+                        <span class="btn-loading" style="display: none;">
+                            <div class="spinner"></div>
+                        </span>
+                    </button>
+                </div>
+                <div class="input-footer">
+                    <small>Press Enter to send or click Generate</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <h2>About Our AI Assistant</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Our AI Shopping Assistant helps you find the perfect products on Amazon.
+Just tell us what you're looking for—whether it's a phone under ₹1 lakh or the best budget earbuds—and our AI will instantly recommend the most relevant products, all from real listings.
+                    </p>
+                    <ul class="about-features">
+                        <li>✅ Amazone Products</li>
+                        <li>✅ Search and get instend products</li>
+                        <li>✅ Trusted Website</li>
+                        <li>✅ RAG Powered recommendation system</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>1M+</h3>
+                        <p>Questions Answered</p>
+                    </div>
+                    <div class="stat">
+                        <h3>24/7</h3>
+                        <p>Available</p>
+                    </div>
+                    <div class="stat">
+                        <h3>99%</h3>
+                        <p>Accuracy Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
