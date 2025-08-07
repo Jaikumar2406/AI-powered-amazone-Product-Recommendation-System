@@ -122,9 +122,9 @@ chain_with_memmory = RunnableWithMessageHistory(
     history_messages_key="chat_history",
     output_messages_key="answer",
 )
-@app.get("/")
-def home():
-    return {"message": "Hello from system starts!"}
+@app.get("/", response_class=HTMLResponse)
+async def serve_frontend(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
 
 @app.post("/recommend")
 def recommend(user_input: UserInput):
@@ -137,4 +137,5 @@ def recommend(user_input: UserInput):
     
     except Exception as e:
         return {"error": str(e)}
+
 
