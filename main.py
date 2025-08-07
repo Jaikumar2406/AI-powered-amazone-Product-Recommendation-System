@@ -136,6 +136,11 @@ def recommend(user_input: UserInput):
         return {"recommendation": response["answer"]}
     
     except Exception as e:
-        return {"error": str(e)}
+        traceback.print_exc()  
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Internal server error: {str(e)}"
+        )
+
 
 
