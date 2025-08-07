@@ -75,7 +75,7 @@ class ChatApp {
   }
   async callAPI(question) {
   try {
-    const response = await fetch("http://ai-product-recommendation-api.onrender.com/recommend", {
+    const response = await fetch("https://ai-product-recommendation-api.onrender.com/recommend", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
