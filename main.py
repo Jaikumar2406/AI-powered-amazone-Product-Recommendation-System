@@ -31,10 +31,9 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], 
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["POST", "GET"],
     allow_headers=["*"],
 )
-
 
 astra_db_endpoint = os.getenv("astra_db_endpoint")
 astra_db_token = os.getenv("astra_db_token")
@@ -141,6 +140,7 @@ def recommend(user_input: UserInput):
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Internal server error: {str(e)}"
         )
+
 
 
 
