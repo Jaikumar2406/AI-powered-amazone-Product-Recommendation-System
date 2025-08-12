@@ -36,11 +36,11 @@ app.add_middleware(
 )
 
 
-astra_db_endpoint = os.getenv("astra_db_endpoint")
-astra_db_token = os.getenv("astra_db_token")
-astra_db_keyspace = os.getenv("astra_db_keyspace")
-groq = os.getenv("groq")
-hf_token = os.getenv("hf_token")
+# astra_db_endpoint = os.getenv("astra_db_endpoint")
+# astra_db_token = os.getenv("astra_db_token")
+# astra_db_keyspace = os.getenv("astra_db_keyspace")
+# groq = os.getenv("groq")
+# hf_token = os.getenv("hf_token")
 
 embedding = HuggingFaceBgeEmbeddings(model_name="BAAI/bge-base-en-v1.5",
                                     model_kwargs={"token" : hf_token})
@@ -141,6 +141,7 @@ def recommend(user_input: UserInput):
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Internal server error: {str(e)}"
         )
+
 
 
 
